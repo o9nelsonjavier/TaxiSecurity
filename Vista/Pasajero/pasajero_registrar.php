@@ -19,7 +19,7 @@
                 <input type="text" class="form-control" placeholder="Cedula" id="cedula" name="cedula_pasajero" required><br><br>
 
                 
-                <input type="text" class="form-control"  placeholder="Correo" id="correo" name="correo_pasajero" required><br><br>
+                <input type="text" class="form-control"  placeholder="Correo" id="correo" name="correo_pasajero" maxlength="200"><br><br>
 
             
                 <input type="text" class="form-control" placeholder="Celular" id="celular" name="celular_pasajero" required><br><br>
@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" placeholder="Huella" id="huella" name="huella_pasajero" required><br><br>
 
                 
-                <input type="text" class="form-control" placeholder="Pin" id="pin" name="pin_pasajero" required><br><br>
+                <input type="number" class="form-control" placeholder="Pin" id="pin" name="pin_pasajero" required><br><br>
 
                 <input type="submit" value="Registrarse" class="btnRegistro btn w-100">
             </form>
