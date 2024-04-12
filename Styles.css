@@ -20,10 +20,10 @@
 
 .menu{
     background-color:#0F6292 !important;
-    color:white !important;
+   /* color:white !important; */
 }
 
 .nav-item:hover {
     background-color: #FFED00;
-    color: black;
+    color: black !important ;
 }
