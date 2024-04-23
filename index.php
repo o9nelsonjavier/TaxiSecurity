@@ -38,7 +38,7 @@
             <img src="Imagenes/slider2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="Imagenes/slider3.jpg" class="d-block w-100" alt="image" height="800" width="500">
+            <img src="Imagenes/slider3.png" class="d-block w-100" alt="image" height="800" width="500">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
