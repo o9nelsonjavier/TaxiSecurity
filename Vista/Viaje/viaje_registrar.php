@@ -2,6 +2,7 @@
 require "../../Controlador/Viaje/viaje_controller.php";
 $viajeController = new ViajeController();
 $conductores = $viajeController->obtenerConductores();
+$pasajeros = $viajeController->obtenerPasajeros();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,18 +24,20 @@ $conductores = $viajeController->obtenerConductores();
                 <input type="datetime-local" class="form-control" placeholder="Hora de fin" id="hora_fin" name="hora_fin" required><br>
 
                 <select class="form-control" name="conductor_id">
+                    <option value="0" >Seleccione conductor...</option>
                     <?php foreach ($conductores as $conductor): ?>
-                        <option value="<?= $conductor['id_conductor']; ?>"><?= $conductor['nombre_conductor']; ?></option>
+                       <option value="<?= $conductor['id_conductor']; ?>"><?= $conductor['nombre_conductor']; ?></option>
                     <?php endforeach; ?>
                 </select><br>
 
-                <select class="form-control" name="conductor_id">
-                    <?php foreach ($conductores as $conductor): ?>
-                        <option value="<?= $conductor['id_conductor']; ?>"><?= $conductor['nombre_conductor']; ?></option>
+                <select class="form-control" name="pasajero_id">
+                    <option value="0" >Seleccione pasajero...</option>
+                    <?php foreach ($pasajeros as $pasajero): ?>
+                         <option value="<?= $pasajero['id_pasajero']; ?>"><?= $pasajero['nombre_pasajero']; ?></option>
                     <?php endforeach; ?>
                 </select><br>
 
-                <input type="submit" value="Registrarse" class="btnRegistro btn w-100">
+                <input type="submit" value="Registrar viaje" class="btnRegistro btn w-100">
             </form>
         </div>
     </div>

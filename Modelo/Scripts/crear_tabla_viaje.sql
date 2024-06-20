@@ -3,7 +3,5 @@ CREATE TABLE IF NOT EXISTS viaje (
     pasajero_id INT NOT NULL,
     conductor_id INT NOT NULL,
     hora_inicio DATETIME NOT NULL,
-    hora_fin DATETIME NOT NULL,
-    FOREIGN KEY (pasajero_id) REFERENCES pasajero(id_pasajero),
-    FOREIGN KEY (conductor_id) REFERENCES conductor(id_conductor)
+    hora_fin DATETIME NOT NULL
 );
