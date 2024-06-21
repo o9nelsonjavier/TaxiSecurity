@@ -2,16 +2,19 @@
 include_once "../../Modelo/DB/conectar.php";
 include_once "../../Modelo/Conductor/conductor_model.php";
 include_once "../../Modelo/Pasajero/pasajero_model.php";
+include_once "../../Modelo/Viaje/viaje_model.php";
 
 class ViajeController {
     private $db;
     private $conductorModel;
     private $pasajeroModel;
+    private $viajeModel;
 
     public function __construct() {
         $this->db = new MySQLDB('localhost', 'root', '', 'taxi_security');
         $this->conductorModel = new ConductorModel($this->db);
         $this->pasajeroModel = new PasajeroModel($this->db);
+        $this->viajeModel = new ViajeModel($this->db);
     }
 
     public function obtenerConductores(){
@@ -21,6 +24,11 @@ class ViajeController {
     public function obtenerPasajeros(){
         return $this->pasajeroModel->obtenerPasajeros();
     }
+
+    public function obtenerViajes(){
+        return $this->viajeModel->obtenerViajes();
+    }
+
 }
 
 // Verifica si se recibieron los datos del formulario
